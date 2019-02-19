@@ -1,11 +1,16 @@
-"use strict";
+class Cart {
+    add() {
+    }
 
-function Cart() {
+    remove() {
+    }
+
+    get totalPrice() {
+        return true
+    }
+
+    get loyaltyPoints() {}
 
 }
-
-Cart.prototype.add = () => {
-
-};
 
 module.exports = Cart;

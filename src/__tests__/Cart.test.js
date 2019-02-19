@@ -1,4 +1,3 @@
-const expect = require('expect');
 const Cart = require('../Cart');
 
 describe('Cart class', () => {
@@ -9,5 +8,10 @@ describe('Cart class', () => {
   it('Cart class is defined', () => {
     expect(shoppingCart).toBeDefined();
     expect(shoppingCart.add).toBeDefined();
+    expect(shoppingCart.remove).toBeDefined();
+    jest.spyOn(shoppingCart, 'totalPrice', 'get').mockReturnValue(true);
+    expect(shoppingCart.totalPrice).toEqual(true);
+    jest.spyOn(shoppingCart, 'loyaltyPoints', 'get').mockReturnValue(true);
+    expect(shoppingCart.loyaltyPoints).toEqual(true);
   });
 });
